@@ -1,6 +1,3 @@
-import java.io.*;
-import java.util.*;
-
 public class crc {
     public static void main(String[] args) {
         String input = "1010101010";
@@ -9,20 +6,6 @@ public class crc {
         System.out.println("Message: " + input);
         System.out.println("Polynomial: " + key);
         System.out.println("CRC Checksum: " + crc);
-    }
-
-    public static String xor(String input, String key) {
-        String result="";
-        int n=input.length();
-        int s=key.length();
-        
-        for(int i=1; i<n; i++) {
-            if(input.charAt(i) == key.charAt(i))
-                result += "0";
-            else
-                result += "1";
-        }
-        return result;
     }
 
     public static String calculateCRC(String input, String key) {
